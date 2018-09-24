@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>八、CSS a标签伪类、字符实体</title>
+		<!--
+			链接点击的几个状态：未访问、光标进入、光标点击、访问后；
+			CSS允许针对A标签的四种状态设置各自的CSS属性，叫做CSS伪类。
+				1.active一般不必写;
+				2.一定注意属性设置顺序：LVHA;
+				3.a:link可以缩写为a;
+		-->
+		<style>
+			a:link {
+				color: blue;
+			}
+			a:visited {
+				color: darkgrey;
+			}
+			a:hover {
+				color: orange;
+			}
+			a:active {
+				color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			链接点击的几个状态：未访问、光标进入、光标点击、访问后；<br/>
+			CSS允许针对A标签的四种状态设置各自的CSS属性，叫做CSS伪类。<br/>
+				1.active一般不必写;<br/>
+				2.一定注意属性设置顺序：LVHA;<br/>
+				3.a:link可以缩写为a;<br/>
+		</div>
+		<div>
+			<a href="#">空链接</a>
+			<a href="#">空链接</a>
+			<a href="#">空链接</a>
+			<a href="#">空链接</a>
+			<a href="#">空链接</a>
+		</div>
+		<div>
+			<br/>
+			在html开发中,有一些字符，不适于直接写出，如:&gt;、&lt;<br/>
+			一般的格式：&amp; + 实体名 + ';'
+			&gt;&lt;&quot;&apos;&yen;&nbsp;&copy;&times;&divide;
+		</div>
+	</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>一、第一步：要规划好界面布局</title>
+		<!--
+			制作网页第一步先是要规划好空间布局，由大到小、由上到下、由左到右、由粗到细逐层细化。
+		布局层次的划分用"<div></div>"来实现，尺寸样式的设置由css来完成。css的引入方式有四种：
+			1.行内式：标签的style属性
+			2.内嵌式：<head><style>css部分</style><head>
+			3.导入式：@import "name.css";
+			4.链接式：<link href="name.css" rel="stylesheet" type="text/css">
+		-->
+		<style type="text/css">
+			/*
+			 * 底层容器：
+			 *		宽度
+			 * 		背景
+			 * 		
+			 *   
+			 */
+			#container {
+				width: 1002px;
+				background: lightgray;
+				margin: auto;
+			}
+			
+			#header {
+				height: 120px;
+				background: blueviolet;
+			}
+			
+			#main {
+				/*height: 600px;*/
+				background: lightgreen;
+			}
+			
+			#leftSide{
+				width: 700px;
+				height: 600px;
+				background: cornflowerblue;
+				float: left;/*结合div的分层排布，浮动在父div层上和同一div层的后续面板的上边*/
+			}
+			.four {
+				width: 350px;
+				height: 300px;
+				background: whitesmoke;
+				float: left;/*结合div的分层排布，浮动在父div层上和同一div层的后续面板的上边*/
+			}
+			#four_1 {
+				background-color: #6495ED;
+			}
+			#four_2 {
+				background-color: greenyellow;
+			}
+			#four_3 {
+				background-color: #90EE90;
+			}
+			#four_4 {
+				background-color: #FFC0CB;
+			}
+			#rightSide{
+				width: 302px;
+				height: 600px;
+				background: burlywood;
+				float: right;/*结合div的分层排布，浮动在父div层上和同一div层的后续面板的上边*/
+			}
+			
+			#footer {
+				height: 100px;
+				background: mediumvioletred;
+				/*清除浮动:区块上方不允许出现浮动元素时*/
+				clear: left;
+				
+			}
+		</style>
+	</head>
+	
+	<body>
+		<div id="container">
+			
+			<div id="header">header</div>
+			
+			<!--
+				div的分层书写 有利于进行区块划分和区块分层排布，此时
+			浮动块只能在父div区域浮动布置，而不会影响父辈div之间的布局。
+			清除浮动是在同一层div中既有浮动又有不浮动区块时的补充手段。
+			-->
+			<div id="main">
+				<div id="leftSide">
+					<div id="four_1" class="four">1</div>
+					<div id="four_2" class="four">2</div>
+					<div id="four_3" class="four">3</div>
+					<div id="four_4" class="four">4</div>
+				</div>
+				
+				<div id="rightSide"></div>
+				
+				<!--<div id="footer">footer</div>-->
+			</div>
+			
+			<div id="footer">footer</div>
+			
+		</div>
+	</body>
+</html>

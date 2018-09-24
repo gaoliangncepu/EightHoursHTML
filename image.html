@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>四、设置背景图片和图像元素</title>
+		<style type="text/css">
+			#container {
+				/*指定背景容器区域的宽和高*/
+				width: 1002px;
+				height: 700px;
+				border: 1px, solid, red;/*无效*/
+				
+				/*设置背景颜色*/
+				background-color: #D3D3D3;
+				
+				/*设置背景图片:引入图片/设置重复/设置随动/设置位置*/
+				background-image: url(text.jpg);
+				background-repeat: repeat-y;
+				background-attachment: fixed;
+				background-position: -100px, -80px;
+				
+				/*在背景色和背景图片同时存在的情况下，会显示背景图片。
+				 * 两者都要设置是因为：
+				 * 1：考虑到大屏下（如1920*1080或者更大）网站背景图不足以撑满整个显示区域， 所以背景图以外的部分要显示背景色，并且背景图边缘部分必须处理妥当保证平滑过渡到背景色，不会有突兀的感觉。
+				 * 2：倘若你是一个以黑色为主调的网站，默认背景色是白色，那背景图未加载完成时不就先白一下了，导致感觉闪了一下，视觉不友好，根据网站的主色调定义一个背景色，利于减少视觉疲劳（一般是先定义背景色，再定义背景图片，色彩优先 ）。 
+				 * 3：不光是网页body如此，页面里的div、表格有了背景图依然应该设置一个背景色（跟背景图颜色差不多，至少跟文字颜色明显不同）。毕竟有时会出现背景图无法打开的情况，这种情况下如果文字是白色而背景色是默认的白色的话，文字就看不出了。
+				 * 	     完成一个网页的制作之后，尝试把存放图片的文件夹改名让网页呈现无图状态，看看光文字是否可读。针对css文件，也应该做一次同样的测试，看看css文件没有被调用的情况下的状态。千万别认为人人都是稳定、高速的上网。
+				 * 4：由于网速或代码冗余而导致网站打开速度慢的时候，图片加载不出来 即可先显示背景色。
+				 */
+			}
+			
+			/*img标签不是块元素，而是特殊的内联元素，或称为“替换元素”*/
+			#img {
+				width: 100px;
+				height: 80px;
+				margin: 5px;/*可设置*/
+				border: 5px;/*不可设置*/
+				padding: 5px;/*可设置*/
+			}
+		</style>
+	</head>
+	
+	<body>
+		<div id="container">
+			
+			<img id="img" src="Text.gif"/><br/>
+			<img id="img" src="Text.gif"/><br/>
+			<img id="img" src="Text.gif"/><br/>
+			<img id="img" src="Text.gif"/><br/>
+			<img id="img" src="Text.gif"/><br/>
+			<img id="img" src="Text.gif"/><br/>
+			<img id="img" src="Text.gif"/><br/>
+			<img id="img" src="Text.gif"/><br/>
+			<img id="img" src="Text.gif"/><br/>
+			<img id="img" src="Text.gif"/><br/>
+			<img id="img" src="Text.gif"/><br/>
+			<img id="img" src="Text.gif"/><br/>
+			<img id="img" src="Text.gif"/><br/>
+			<img id="img" src="Text.gif"/><br/>
+		</div>
+	</body>
+</html>

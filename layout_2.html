@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>2.练习：田字布局（设置浮动、清除浮动）</title>
+		<style type="text/css">
+			#up_left {
+				background-color: blue;
+				width: 200px;
+				height: 200px;
+				float: left;/*设置左浮动，元素浮动于底层之上，会覆盖底层上的元素*/
+				margin-right: 2px;/*左右侧margin不会合并*/
+				margin-bottom: 5px;/*底部margin取较大值*/
+			}
+			#up_right {
+				background-color: green;
+				width: 200px;
+				height: 200px;
+				float: left;
+				margin-left: 2px;/*左右侧margin不会合并*/
+				margin-bottom: 10px;/*底部margin取较大值*/
+			}
+			#down_left {
+				background-color: yellow;
+				width: 200px;
+				height: 200px;
+				float: left;
+				clear: left;/*清除浮动：其上不允许有左浮元素*/
+				margin-right: 2px;
+				margin-top: 5px;/*顶部margin仅设置当前元素*/
+			}
+			#down_right {
+				background-color: pink;
+				width: 200px;
+				height: 200px;
+				float: left;
+				margin-top: 10px;/*顶部margin仅设置当前元素*/
+			}
+			#father {
+				background-color: #7FFFD4;
+				/*height: 200px;*//*父元素单独设置了height时，不会撑高父div*/
+				/*width: 200px;*//*父元素单独设置了width时，不会撑宽父div*/
+				clear: both;
+			}
+			#kid1 {
+				background-color: #D3D3D3;
+				width: 50px;
+				height: 210px;
+				float: left;
+			}
+			#kid2 {
+				border: dotted red;
+				width: 200px;/*父元素单独设置了width时，超出父div的宽度就会换行显示，但不会撑大父div*/
+				height: 150px;
+				float: left;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="up_left">
+			
+		</div>
+		<div id="up_right">
+			
+		</div>
+		<div id="down_left">
+			
+		</div>
+		<div id="down_right">
+			
+		</div>
+		<div id="father">
+			<div id="kid1">
+			
+			</div>
+			<div id="kid2">
+				
+			</div>
+		</div>
+		
+	</body>
+</html>

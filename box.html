@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>二、盒模型</title>
+		<!--
+			盒模型：是将每一个区块看成是有内外边缘和边框的盒子
+		通过对盒子属性的设置，调整区块内外的显示效果。
+		-->
+		<!--
+			css的选择器：
+			id选择器、class选择器、标签选择器、派生选择器
+			"定位越精细，作用越优先"
+		-->
+		<style type="text/css">
+			#container {
+				width: 1002px;
+				background: lightgray;
+				margin: auto;/*设置水平居中*/
+			}
+			
+			#header {
+				height: 120px;
+				background: orange;
+			}
+			
+			#main {
+				height: 600px;
+				background: lightgreen;
+			}
+			
+			#leftSide{
+				width: 700px;
+				height: 600px;
+				/*margin: 5px;*/
+				background: cornflowerblue;
+				float: left;
+			}
+			.four {
+				width: 300px;
+				height: 250px;
+				background: white;
+				margin: 10px;
+				border: 5px solid darkred;
+				padding: 10px;
+				float: left;
+			}
+			
+			/*设置margin/border/padding属性,不会压缩内容空间的大小,只会向外扩大延展*/
+			.four div{
+				width: 300px;
+				height: 120px;
+			}
+			/*margin重叠现象：
+			 * 相邻的普通div（float就不是普通），上下边距并非直接相加，而是取margin较大值；
+			 * 父子关系的普通div之间也会发生margin重叠现象。
+			 */
+			#content1 {
+				background-color: #90EE90;
+				margin-bottom: 5px;
+			}
+			#content2 {
+				background-color: #DEB887;
+				margin-top: 5px;
+			}
+			#content2 div {
+				width: 300px;
+				height: 60px;
+				background-color: #8B0000;
+				margin-top: 10px;
+			}
+			
+			#rightSide{
+				width: 302px;
+				height: 600px;
+				background: lightpink;
+				float: left;
+			}
+			
+			#footer {
+				height: 100px;
+				background: mediumvioletred;
+				clear: right;
+			}
+			
+		</style>
+	</head>
+	
+	<body>
+		<div id="container">
+			
+			<div id="header">
+				header
+			</div>
+			
+			<div id="main">
+				<div id="leftSide">
+					<div class="four">
+						<div id="content1">
+							centent1
+						</div>
+						<div id="content2">
+							<div>
+								content2 child
+							</div>
+						</div>
+					</div>
+					<div class="four"></div>
+					<div class="four"></div>
+					<div class="four"></div>
+				</div>
+				
+				<div id="rightSide"></div>
+			</div>
+			
+			<div id="footer">
+				footer
+			</div>
+			
+		</div>
+		
+	</body>
+</html>

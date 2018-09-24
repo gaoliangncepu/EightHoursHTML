@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>三、设置文本属性和样式、内联元素</title>
+		<!--设置文字样式、字体、字号、颜色、格式等-->
+		<style type="text/css">
+			div {
+				/*font链式表达*/
+				font:18px Simsun,arial,sans-serif;
+			}
+			/*内联元素：
+			 	又称行内元素。不会独立站行，设置边框和纵向内外补白均无效。
+			 	内联元素和块元素之间可以强制转化：display.
+			 */
+			span {
+				color: #C71585;
+				
+				/*行内元素，设置border、margin-top、margin-bottom、padding-top、padding-bottom均无效*/
+				margin-top: 100px;
+				border-top: 100px;
+				padding-top: 100px;
+				margin-bottom: 100px;
+				border-bottom: 100px;
+				padding-bottom: 100px;
+				margin-left: 5px;
+				margin-right: 5px;
+				border-left: 100px;
+				border-right: 100px;
+				padding-left: 5px;
+				padding-right: 5px;
+				
+				/*设置字体备选方案*/
+				font: "雅宋", "微软雅黑", "黑体", sans-serif, ;
+				
+				/*强制转成块元素*/
+				/*display: block;*/
+			}
+			#container {
+				width: 1002px;
+				background: lightgray;
+				margin: auto;
+			}
+			
+			#header {
+				height: 120px;
+				background: orange;
+			}
+			
+			#main {
+				height: 600px;
+				background: lightgreen;
+			}
+			
+			#leftSide{
+				width: 700px;
+				height: 600px;
+				/*margin: 5px;*/
+				background: cornflowerblue;
+				float: left;/*只会浮动在后续面板的上边*/
+			}
+			.four {
+				width: 300px;
+				height: 250px;
+				background: white;
+				margin: 10px;
+				border: 5px solid transparent;
+				padding: 10px;
+				float: left;/*只会浮动在后续面板的上边*/
+			}
+			
+			#rightSide{
+				width: 302px;
+				height: 600px;
+				background: lightpink;
+				float: left;/*只会浮动在后续面板的上边*/
+			}
+			
+			#footer {
+				height: 100px;
+				background: mediumvioletred;
+			}
+			#p1 {
+				/*font链式表达：样式、粗细、字号、行高、字体*/
+				font: italic small-caps lighter 15px/30px '微软雅黑';/*字号和字体是必须有的*/
+				/*文字颜色*/
+				color: blue;
+			}
+			#p2 {
+				font-style: italic;
+				font-variant: small-caps;
+				font-weight: lighter;
+				font-size: 15px;
+				line-height: 30px;
+				font-family: '微软雅黑';
+				color: red;
+			}
+			#p3 {
+				font: normal normal bold 15px/30px '黑体','微软雅黑';
+				color: orange;
+				/*首行缩进*/
+				text-indent: 20px;
+				text-align: left;
+				text-overflow: ellipsis;
+				text-transform: capitalize;
+				text-decoration: line-through;
+				text-shadow: 2px 2px 1px rgba(0,0,0,.3);
+			}
+			#p4 {
+				font: 15px '宋体','微软雅黑';
+				background-color: mistyrose;
+				color: darkgreen;/*设置字体颜色*/
+				opacity: 0.7;/*设置透明度,取值在0.0-1.0之间;*/
+				letter-spacing: 5px;
+				word-spacing: 20px;
+			}
+			#Text {
+				width: 100px;
+				height: 80px;
+				margin: 5px;//可设置
+				border: 5px;//不可设置
+				padding: 5px;//可设置
+				background-repeat: repeat-x;
+			}
+		</style>
+	</head>
+	
+	<body>
+		<div id="container">
+			
+			<div id="header">
+				header
+			</div>
+			
+			<div id="main">
+				<div id="leftSide">
+					<div id="p1" class="four">
+						<span>答：</span>东亚合作系列会议包括东盟与对话伙伴（10+1）、东盟与中日韩（10+3）、东亚峰会和东盟地区论坛等东亚合作各机制会议，王毅外长率团参加了此次在马尼拉举行的系列外长会。此次系列会议重在聚焦东亚地区发展合作，并就国际地区形势和热点问题交换意见。
+					</div>
+					
+					<div id="p2" class="four">
+						<span>答：</span>东亚合作系列会议包括东盟与对话伙伴（10+1）、东盟与中日韩（10+3）、东亚峰会和东盟地区论坛等东亚合作各机制会议，王毅外长率团参加了此次在马尼拉举行的系列外长会。此次系列会议重在聚焦东亚地区发展合作，并就国际地区形势和热点问题交换意见。
+					</div>
+					
+					<div id="p3" class="four">
+						<span>答：</span>hellow world东亚合作系列会议包括东盟与对话伙伴（10+1）、东盟与中日韩（10+3）、东亚峰会和东盟地区论坛等东亚合作各机制会议，王毅外长率团参加了此次在马尼拉举行的系列外长会。此次系列会议重在聚焦东亚地区发展合作，并就国际地区形势和热点问题交换意见。
+					</div>
+					
+					<div id="p4" class="four">
+						<span>答：</span>东亚合作系列会议包括东盟与对话伙伴（10+1）、东盟与中日韩（10+3）、东亚峰会和东盟地区论坛等东亚合作各机制会议，王毅外长率团参加了此次在马尼拉举行的系列外长会。此次系列会议重在聚焦东亚地区发展合作，并就国际地区形势和热点问题交换意见。hellow world
+					</div>
+				</div>
+				
+				<div id="rightSide"></div>
+			</div>
+			
+			<div id="footer">
+				footer
+			</div>
+			
+		</div>
+		
+	</body>
+</html>

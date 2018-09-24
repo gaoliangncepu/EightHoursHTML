@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>七、HTML常用语义标签</title>
+		<style>
+			ul li{
+				list-style-type: circle;
+			}
+			ol li{
+				list-style-image: url(Text.gif);
+				list-style-type: lower-alpha;
+				list-style-position: inside;
+			}
+			table {
+				border-collapse: separate;
+				border-spacing: 5px;
+			}
+			th {
+				border: 2px solid blue;
+			}
+			td {
+				border: 1px solid red;
+			}
+			#schedule {
+				border-collapse: collapse;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>标题字样标签1</h1>
+		<h2>标题字样标签2</h2>
+		<h3>标题字样标签3</h3>
+		<h4>标题字样标签4</h4>
+		<h5>标题字样标签5</h5>
+		<h6>标题字样标签6</h6>
+		<p>默认文本标签</p>
+		<a href="box.html#content2" target="_blank" title="鼠标进入提示">超链接+锚点</a>
+		<a href="languageLabels.html#table2" target="_blank">本地锚点</a>
+		<img src="http://img1.ph.126.net/-P5hIeVoUNFg27It1H2VCQ==/1835216848253716954.jpg"/>
+		<div>
+			<ul>
+				<li>无序列表1</li>
+				<li>无序列表2</li>
+				<li>无序列表3</li>
+				<li>无序列表4</li>
+			</ul>
+		</div>
+		<div>
+			<ol>
+				<li>有序列表1</li>
+				<li>有序列表2</li>
+				<li>有序列表3</li>
+				<li>有序列表4</li>
+			</ol>
+		</div>
+		<div>
+			<table>
+				<tr>
+					<th colspan="2">Header</th><!--表头-->
+				</tr>
+				<tr>
+					<td>Data</td>
+					<td rowspan="2">Unit</td>
+				</tr>
+				<tr>
+					<td>1</td>
+				</tr>
+			</table>
+		</div>
+		<a name="table2">锚点table2</a>
+		<div>
+			<table id="schedule">
+				<tr>
+					<th>时间日期</th>
+					<th>1</th>
+					<th>2</th>
+					<th>3</th>
+					<th>4</th>
+					<th>5</th>
+				</tr>
+				<tr>
+					<td rowspan="2">上午</td>
+					<td>语文</td>
+					<td>地理</td>
+					<td>代数</td>
+					<td width="30px"></td>
+					<td width="30"></td>
+				</tr>
+				<tr>
+					<td>语文</td>
+					<td>地理</td>
+					<td>代数</td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td colspan="6" height="20"></td>
+				</tr>
+				<tr>
+					<td rowspan="2">下午</td>
+					<td height="20"></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td height="20"></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+			</table>
+		</div>
+	</body>
+</html>
