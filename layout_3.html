@@ -1,0 +1,168 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>3.练习：父子关系与margin重叠</title>
+		<style type="text/css">
+			/*
+			 * 普通元素相邻时，相邻边的margin值取其中的较大值;
+			 * 普通元素包含时，
+			 * 		top、bottom的margin会合并，取值为较大值；
+			 * 		left、right的margin不会合并，都存在。
+			 * 浮动元素包含时，
+			 * 		父div的margin仅设置给父div，不影响子div；
+			 * 		子div的margin相对于父div的border内侧起作用；
+			 * 		父子margin不会合并。
+			 * margin-right 用于father的右外边距时情况特殊；
+			 * 
+			 */
+			#bottom {
+				height: 200px;
+				background-color: orange;
+				clear: left;
+			}
+			
+			.father {
+				background-color: grey;
+			}
+			
+			hr {
+				clear: both;
+			}
+			
+			/*
+			 * 普通元素相邻时，相邻边的margin值取其中的较大值
+			 * 普通父子div:
+			 * 		top、bottom的margin会合并，取值为较大值；
+			 * 		left、right的margin不会合并，都存在。
+			 */
+			#father1 {
+				margin-top: 15px;
+				margin-left: 15px;
+				margin-right: 25px;
+				margin-bottom: 15px;
+			}
+			#kid1 {
+				background: rgba(100, 200 ,150, 0.5);
+				width: 200px;
+				height: 200px;
+				margin: 10px;
+			}
+			#kid2 {
+				background: rgba(150, 100 ,150, 0.5);
+				width: 200px;
+				height: 200px;
+				margin: 20px;
+			}
+			
+			/* 普通父div
+			 * 浮动子div
+			 * 		父div的margin仅设置给父div，不影响子div；
+			 * 		子div的margin相对于父div的border内侧起作用；
+			 * 		浮动元素相邻时，相邻边的margin值叠加；
+			 */
+			#father2 {
+				border: dashed 10px;
+				height: 200px;
+				margin-top: 15px;
+				margin-left: 15px;
+				margin-right: 25px;/*有作用*/
+				margin-bottom: 15px;
+			}
+			#kid3 {
+				background: rgba(100, 200 ,150, 0.5);
+				width: 100px;
+				height: 100px;
+				margin: 10px;
+				float: left;
+			}
+			#kid4 {
+				background: rgba(150, 100 ,150, 0.5);
+				width: 400px;
+				height: 100px;
+				margin: 20px;
+				float: left;
+			}
+			
+			/* 浮动父div
+			 * 浮动子div
+			 * 		父div的margin仅设置给父div，不影响子div；
+			 * 		子div的margin相对于父div的border内侧起作用；
+			 * 		浮动元素相邻时，相邻边的margin值叠加；
+			 */
+			#father3 {
+				border: dashed 10px;
+				margin-top: 15px;
+				margin-left: 25px;
+				margin-right: 25px;/*不起作用*/
+				margin-bottom: 15px;
+				float: left;
+			}
+			#kid5 {
+				background: rgba(100, 200 ,150, 0.5);
+				width: 100px;
+				height: 100px;
+				margin: 10px;
+				float: left;
+			}
+			#kid6 {
+				background: rgba(150, 100 ,150, 0.5);
+				width: 600px;
+				height: 200px;
+				margin: 20px;
+				float: left;
+			}
+			
+			/* 浮动父div
+			 * 普通子div
+			 * 		父div的margin仅设置给父div，不影响子div；
+			 * 		子div的margin相对于父div的border内侧起作用；
+			 * 		普通元素相邻时，相邻边的margin值取其中较大者；
+			 */
+			#father4 {
+				border: dashed 10px;
+				margin-top: 15px;
+				margin-left: 25px;
+				margin-right: 25px;/*不起作用*/
+				margin-bottom: 15px;
+				float: left;
+			}
+			#kid7 {
+				background: rgba(100, 200 ,150, 0.5);
+				width: 100px;
+				height: 100px;
+				margin: 10px;
+			}
+			#kid8 {
+				background: rgba(150, 100 ,150, 0.5);
+				width: 600px;
+				height: 200px;
+				margin: 20px;
+			}
+		</style>		
+	</head>
+	<body>
+		<div class="father" id="father1">
+			<div class="kid_1" id="kid1">1</div>
+			<div class="kid_1" id="kid2">2</div>
+		</div>
+		<hr />
+		<div class="father" id="father2">
+			<div class="kid_2" id="kid3">3</div>
+			<div class="kid_2" id="kid4">4</div>
+		</div>
+		<hr />
+		<div class="father" id="father3">
+			<div class="kid_3" id="kid5">5</div>
+			<div class="kid_3" id="kid6">6</div>
+		</div>
+		<hr />
+		<div class="father" id="father4">
+			<div class="kid_4" id="kid7">7</div>
+			<div class="kid_4" id="kid8">8</div>
+		</div>
+		<div id="bottom"></div>
+	</body>
+</html>
