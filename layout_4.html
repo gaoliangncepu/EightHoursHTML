@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>4.练习：父子关系与尺寸设置</title>
+		<style type="text/css">
+			/*
+			 * 首先看元素是否独立设置了尺寸？
+			 * 		如果有设置，则直接响应设置值；
+			 * 		若果没有，则看父子元素浮动情况？
+			 * 			若均为普通元素，则父被子在方向上撑开；
+			 * 			若均为浮动元素，则父被子在相应方向上撑开；
+			 * 			若父为浮动元素子不是浮动元素，则父的大小取决于被子撑开的大小；
+			 * 			若父不是浮动元素子是浮动元素，则父的大小取决于单独设置的大小，若未设置则不显示。
+			 * 
+			 * ① 明确设置了尺寸，则按尺寸来，不受其他影响；
+			 * ② 普通块元素独占一行，浮动块元素可以同行显示；
+			 * ③ 浮动的子元素排版效果受父元素尺寸影响；
+			 * ④ 浮动的父元素在未指定尺寸时，是被子元素撑大的；
+			 */
+			hr {
+				clear: both;
+			}
+			/*
+			 * 普通父div（独占一行）
+			 * 普通子div（独占一行）
+			 * 
+			 * 父div单独设置了尺寸
+			 * 		不会被子div撑开，也不会限制子div的发展。
+			 * 父div未设置尺寸
+			 * 		父被子div在竖直方向上撑开。
+			 */
+			#father1 {
+				height: 40px;
+				width: 40px;
+				background-color: green;
+			}
+			.kid_1 {
+				background: rgba(255,165,165,0.1);
+				height: 27px;
+				width: 60px;
+			}
+			
+			/*
+			 * 普通父div（独占一行）
+			 * 浮动子div
+			 * 
+			 * 父div单独设置了尺寸
+			 * 		不会被div撑开，也不会限制子div的发展，但影响子div的排布。
+			 * 父div未设置尺寸
+			 * 		父div不显示
+			 */
+			#father2 {
+				background-color: green;
+				width: 40px;
+				height: 40px;
+			}
+			.kid_2 {
+				background: rgba(155,165,165,0.5);
+				height: 30px;
+				width: 60px;
+				float: left;
+			}
+			
+			/*
+			 * 浮动父div
+			 * 普通子div（独占一行）
+			 * 
+			 * 父div单独设置了尺寸
+			 * 		不会被子div撑开，也不会限制子div的发展。
+			 * 父div未设置尺寸
+			 * 		父被子div在水平和竖直两个方向上撑开。
+			 */
+			#father3 {
+				background-color: green;
+				/*height: 40px;
+				width: 80px;*/
+				float: left;
+			}
+			.kid_3 {
+				background: rgba(155,165,165,0.5);
+				height: 30px;
+				width: 70px;
+				
+			}
+			/*
+			 * 浮动父div
+			 * 浮动子div
+			 * 
+			 * 父div单独设置了尺寸
+			 * 		不会被div撑开，也不会限制子div的发展，但影响子div的排布。
+			 * 父未设置尺寸
+			 * 		父被子div在水平和竖直两个方向上撑开。
+			 */
+			#father4 {
+				background-color: green;
+				float: left;
+				width: 40px;
+				height: 80px;
+			}
+			
+			.kid_4 {
+				float: left;
+				background: rgba(155,50,50,0.5);
+				height: 30px;
+				width: 70px;
+			}
+		</style>
+		
+	</head>
+	<body>
+		<div class="father" id="father1">
+			<div class="kid_1" id="kid1">1</div>
+			<div class="kid_1" id="kid2">2</div>
+		</div>
+		<hr />
+		<div class="father" id="father2">
+			<div class="kid_2" id="kid3">3</div>
+			<div class="kid_2" id="kid4">4</div>
+		</div>
+		<hr />
+		<div class="father" id="father3">
+			<div class="kid_3" id="kid5">5</div>
+			<div class="kid_3" id="kid6">6</div>
+		</div>
+		<hr />
+		<div class="father" id="father4">
+			<div class="kid_4" id="kid7">7</div>
+			<div class="kid_4" id="kid8">8</div>
+		</div>
+	</body>
+</html>
