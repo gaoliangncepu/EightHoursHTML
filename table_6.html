@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>练习：绘制复杂表格1</title>
+		<style type="text/css">
+			table {
+				width: 400px;
+				height: 200px;
+				
+				border: 2px solid black;
+				
+				table-layout: auto;
+				border-collapse: separate;
+				border-spacing: auto;
+				caption-side: top;
+				empty-cells: show;
+			}
+		</style>
+	</head>
+	<body>
+		<table border="1">
+			<caption>练习：绘制复杂表格1</caption>
+			<thead>
+				<tr height="60px">
+					<th height="20px" width="20%">网站</th>
+					<th colspan="2">统计情况</th>
+				</tr>
+			</thead>
+			<tfoot>
+			</tfoot>
+			<tbody>
+				<tr>
+					<td rowspan="3" align="center">个人主页</td>
+					<td width="70%" height="20%">http://hao.360.cn/</td>
+					<td align="center">11</td>
+				</tr>
+				<tr>
+					<td>http://hao.360.cn/</td>
+					<td>22</td>
+				</tr>
+				<tr>
+					<td>http://hao.360.cn/</td>
+					<td></td>
+				</tr>
+			</tbody>
+		</table>
+	</body>
+</html>
