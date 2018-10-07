@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+	<head>
+		<meta charset="utf-8" />
+		<title>Multiple backgrounds</title>
+		<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+		<style>
+			.test {
+			width: 300px;
+			height: 300px;
+			background: 
+				url(img/text.jpg) no-repeat 10px 20px/60px 60px padding-box,
+				url(img/text.jpg) no-repeat 50px 60px/60px 80px padding-box,
+				url(img/text.jpg) no-repeat 90px 100px/60px padding-box #aaa;
+			}
+		</style>
+	</head>
+	<body>
+		<h4>
+			一个元素可以设置多组背景图像，每组属性间使用逗号分隔。<br />
+			如果设置的多组背景图之间存在着交集（即重叠关系），前面的背景图会覆盖在后面的背景图之上。
+			<ul>
+				<li>background-image：指定元素使用的背景图像。可以是图片路径或使用渐变创建的“背景图像”</li>
+				<li>background-position：指定背景图像在元素中出现的位置。</li>
+				<li>background-size：指定背景图像尺寸。</li>
+				<li>background-repeat：指定背景图像如何填充。</li>
+				<li>background-attachment：定义滚动时背景图像相对于谁固定。</li>
+				<li>background-origin：指定背景图像从元素的哪个区域作为显示的原点。</li>
+				<li>background-clip：指定背景图像向外裁剪的区域。</li>
+				<li>background-color：指定背景颜色。</li>
+			</ul>
+			<ul>
+				<li>background-image: url(test1.jpg), url(test2.jpg), url(test3.jpg);</li>
+				<li>background-repeat: no-repeat, no-repeat, no-repeat;</li>
+				<li>background-attachment: scroll, scroll, scroll;</li>
+				<li>background-position: 10px 20px, 50px 60px, 90px 100px;</li>
+				<li>background-size: 60px 60px, 60px 80px, 60px;</li>
+				<li>background-origin: content-box, content-box, content-box;</li>
+				<li>background-clip: padding-box, padding-box, padding-box;</li>
+				<li>background-color: #aaa;</li>
+			</ul>
+		</h4>
+		<div class="test">定义多重背景图像</div>
+	</body>
+</html>

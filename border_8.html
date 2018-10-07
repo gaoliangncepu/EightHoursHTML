@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+	<head>
+		<meta charset="utf-8" />
+		<title>border-image-source</title>
+		<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+		<style>
+			.test {
+				padding: 10px;
+				border: 27px solid;
+				border-image-source: url(img/Text.gif);
+			}
+			
+			.test2 {
+				border: 10px solid;
+				border-image: linear-gradient(red, yellow) 10;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="test">
+			用图片来做边框<br />
+			指定一个图像用来替代border-style所定义的边框样式。
+		</div>
+		<div class="test2">
+			用渐变来做边框
+		</div>
+	</body>
+</html>

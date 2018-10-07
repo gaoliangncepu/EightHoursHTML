@@ -4,41 +4,63 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		<title>1.练习：div创建布局/CSS控制布局</title>
+		<title>练习：div创建布局/CSS控制布局</title>
 		<style>
 			div {
-				width: 20px;
-				height: 20px;
+				/*不设置大小时div的默认尺寸大小为（width：∞,height：0）*/
+				width: 100px;
+				height: 100px;
 				background-color: royalblue;
 				border: solid red;
 				margin-top: 10px;
 			}
 			
+			p {
+				margin: 0px;
+			}
+			
 			#top {
 				background-color: aquamarine;
 			}
+
 			
 			.left_div {
-				border: dotted red;
+				border: 1px dotted red;
+				overflow: hidden;
+			}
+			
+			#main {
+				overflow: auto;
+			}
+			
+			#right {
+				overflow: scroll;
+			}
+			
+			#footer {
+				visibility: hidden;
 			}
 		</style>
 	</head>
 	<body>
 		<div id="top">
-			
+			<p>里面有一些文字信息，当文字内容太多时，显示效果可以通过“溢出”来控制</p>
 		</div>
+		
 		<div id="left" class="left_div">
-			
+			<p>里面有一些文字信息，当文字内容太多时，显示效果可以通过“溢出”来控制</p>
 		</div>
+		
 		<div id="main">
-			
+			<p>里面有一些文字信息，当文字内容太多时，显示效果可以通过“溢出”来控制</p>
 		</div>
 
 		<div id="right">
-			
+			<p>里面有一些文字信，当文字内不太多时</p>
 		</div>
+		
 		<div id="footer">
-			
+			<p>里面有一些文字信息，当文字内容太多时，显示效果可以通过“溢出”来控制</p>
 		</div>
 	</body>
 </html>

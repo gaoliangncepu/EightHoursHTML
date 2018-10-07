@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+	<head>
+		<meta charset="utf-8" />
+		<title>border-image-repeat</title>
+		<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+		<style>
+			.demo{
+				margin: 30px;
+				padding: 10px;
+				border: 50px solid;
+				border-image-source: url(img/text.jpg);
+				border-image-slice: 120 200;
+			}
+			.demo1 {
+				border-image-repeat: stretch;
+			}
+			.demo2 {
+				border-image-repeat: repeat;
+			}
+			.demo3 {
+				border-image-repeat: round;
+			}
+			.demo4 {
+				border-image-repeat: space;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="demo demo1">使用 stretch 关键字来拉伸填充</div>
+		<div class="demo demo2">使用 repeat 关键字来重复平铺填充</div>
+		<div class="demo demo3">使用 round 关键字来拉伸填充</div>
+		<div class="demo demo4">使用 space 关键字来拉伸填充</div>
+	</body>
+</html>

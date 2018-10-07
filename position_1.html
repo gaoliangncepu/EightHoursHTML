@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>position 定位</title>
+		<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+		<style>
+		#position {
+			/* 
+			 * 默认是position: static
+			 * top、right、bottom、left均无效
+			 * 
+			 * position: relative
+			 * 相对定位，相对于自己的参数设定位置
+			 * 不影响其他元素的排版
+			 * 
+			 * position: absolute
+			 * 绝对定位，相对于最近的具有position属性的祖先元素的位置；如果没有定位的祖先元素，则一直回溯到body元素。
+			 * 偏移位置不影响其他元素，其margin不与其他任何margin折叠。
+			 * 四个方位属性未设置时，元素会紧随在其前面的兄弟元素之后，位置上不影响其他元素的排版。
+			 * 
+			 * position: fixed
+			 * 与absolute一致，但偏移定位是以窗口为参考。
+			 * 当出现滚动条时，对象不会随着滚动。
+			 * 
+			 * 尺寸的设置方式：
+			 * 		number
+			 * 		percentage
+			 */
+			
+			position: absolute;
+			/*position:relative;*/
+			/*position: fixed;*/
+			/*position: sticky;*/
+			
+			top: 50%;
+			left: 50%;
+			
+			width: 150px;
+			height: 40px;
+			margin: -20px 0 0 -75px;
+			padding: 0 10px;
+			background: #eee;
+			line-height: 2.4;
+		}
+		</style>
+	</head>
+	<body>
+		<div id="position">水平垂直居中的对象</div>
+	</body>
+</html>

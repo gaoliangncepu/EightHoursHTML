@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+	<head>
+		<meta charset="utf-8" />
+		<title>clip</title>
+		<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+		<style>
+			.test {
+				/*必须将position的值设为absolute或者fixed，此属性方可使用。*/
+				position: absolute;
+				
+				height: 50px;
+				line-height: 50px;
+				background: #eee;
+				
+				/*也可以尝试指定为别的shape类型*/
+				clip: rect(0 auto 35px 10px);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="test">看看被剪切后的效果</div>
+	</body>
+</html>

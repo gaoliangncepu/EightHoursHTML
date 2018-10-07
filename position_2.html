@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>z-index</title>
+		<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+		<style>
+			/*
+			 * z-index 
+			 * position的值为非static时，层叠级别通过z-index属性定义。
+			 * 可以理解为元素漂浮的高度，数值越大位置越高
+			 */
+			.z1,.z2,.z3 {
+				position: absolute;
+				width: 200px;
+				height: 100px;
+				padding: 5px 10px;
+				color: #fff;
+				text-align: right;
+			}
+			.z1 {
+				z-index: 1;
+				background: #000;
+			}
+			.z2 {
+				z-index: 2;
+				top: 30px;
+				left: 30px;
+				background: #C00;
+			}
+			.z3 {
+				z-index: 3;
+				top: 60px;
+				left: 60px;
+				background: #999;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="z1">z-index:1</div>
+		<div class="z2">z-index:2</div>
+		<div class="z3">z-index:3</div>
+	</body>
+</html>

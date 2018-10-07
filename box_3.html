@@ -4,19 +4,26 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		<title>3.练习：父子关系与margin重叠</title>
+		<title>margin重叠</title>
 		<style type="text/css">
 			/*
 			 * 普通元素相邻时，相邻边的margin值取其中的较大值;
 			 * 普通元素包含时，
 			 * 		top、bottom的margin会合并，取值为较大值；
 			 * 		left、right的margin不会合并，都存在。
+			 * 		父元素设置border时，子元素被border分隔，不发生margin重叠。
 			 * 浮动元素包含时，
 			 * 		父div的margin仅设置给父div，不影响子div；
 			 * 		子div的margin相对于父div的border内侧起作用；
 			 * 		父子margin不会合并。
 			 * margin-right 用于father的右外边距时情况特殊；
 			 * 
+			 * margin折叠常规认知：
+			 * 		margin折叠只发生在块级元素上；
+			 * 		浮动元素的margin不与任何margin发生折叠；
+			 * 		设置了属性overflow且值为非visible的块级元素，将不与它的子元素发生margin折叠；
+			 * 		绝对定位元素的margin不与任何margin发生折叠；
+			 * 		根元素的margin不与其它任何margin发生折叠；
 			 */
 			#bottom {
 				height: 200px;

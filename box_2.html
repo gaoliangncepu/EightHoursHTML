@@ -4,90 +4,94 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		<title>1.练习：不同类型元素的盒子属性</title>
+		<title>display</title>
 		<style type="text/css">
-			#text1 {
-				width: 300px;
+			.red_block {
+				width: 200px;
 				height: 100px;
 				background: red;
 			}
-			#text2 {
-				width: 300px;
+			.green_block {
+				width: 200px;
 				height: 100px;
 				background: green;
+			}
+			.blue_block {
+				width: 200px;
+				height: 100px;
+				background: blue;
+			}
+			.orange_block {
+				width: 200px;
+				height: 100px;
+				background-color: orange;
+			}
+			hr {
+				margin: 0px;
+			}
+			
+			#text1 {
+			}
+			#text2 {
 				display: inline;
 			}
 			#text3 {
-				width: 300px;
-				height: 100px;
-				background: blue;
 				display: inline-block;
 			}
-			hr {
-				clear: both;
+			#text31 {
+				display: list-item;
 			}
+			
 			#text4 {
-				width: 300px;
-				height: 100px;
 				margin: 5px;
-				background: red;
 			}
 			#text5 {
-				width: 300px;
-				height: 100px;
-				margin: 10px;
-				background: green;
+				margin: 5px;
 				display: inline;
 			}
 			#text6 {
-				width: 300px;
-				height: 100px;
-				background: blue;
 				margin: 5px;
 				display: inline-block;
 			}
+			#text41 {
+				margin: 5px;
+				display: list-item;
+			}
+			
 			#text7 {
-				width: 300px;
-				height: 100px;
-				padding: 20px;
-				background: red;
+				padding: 5px;
 			}
 			#text8 {
-				width: 300px;
-				height: 100px;
-				padding: 25px;
-				background: green;
+				padding: 10px;
 				display: inline;
 			}
 			#text9 {
-				width: 300px;
-				height: 100px;
-				background: blue;
-				padding: 20px;
+				padding: 5px;
 				display: inline-block;
 			}
+			#text51 {
+				padding: 5px;
+				display: list-item;
+			}
+			
 			#text10 {
-				width: 300px;
-				height: 100px;
 				border: 5px solid #006400;
-				padding: 20px;
-				background: red;
+				padding: 5px;
 			}
 			#text11 {
-				width: 300px;
-				height: 100px;
-				background: green;
-				border: 5px solid #0000FF;
-				padding: 25px;
+				border: 5px solid;
+				padding: 10px;
 				display: inline;
 			}
 			#text12 {
-				width: 300px;
-				height: 100px;
-				background: blue;
 				border: 5px dashed red;
-				padding: 20px;
+				padding: 5px;
 				display: inline-block;
+			}
+			#text61 {
+				border: 5px dotted red;
+				padding: 5px;
+				display: list-item;
 			}
 			img {
 				width: 300px;
@@ -99,21 +103,29 @@
 		</style>
 	</head>
 	<body>
-		<div class="block" id="text1">block</div>
-		<div class="block" id="text2">inline</div>
-		<div class="block" id="text3">inline-block</div>
+		<div class="red_block" id="text1">block</div>
+		<div class="orange_block" id="text31">list-item</div>
+		<div class="green_block" id="text2">inline</div>
+		<div class="blue_block" id="text3">inline-block</div>
+		
 		<hr />
-		<div id="text4">block</div>
-		<div id="text5">inline</div>
-		<div id="text6">inline-block</div>
+		<div class="red_block" id="text4">block</div>
+		<div class="orange_block" id="text41">list-item</div>
+		<div class="green_block" id="text5">inline</div>
+		<div class="blue_block" id="text6">inline-block</div>
+		
 		<hr />
-		<div id="text7">block</div>
-		<div id="text8">inline</div>
-		<div id="text9">inline-block</div>
+		<div class="red_block" id="text7">block</div>
+		<div class="orange_block" id="text51">list-item</div>
+		<div class="green_block" id="text8">inline</div>
+		<div class="blue_block" id="text9">inline-block</div>
+		
 		<hr />
-		<div id="text10">block</div>
-		<div id="text11">inline</div>
-		<div id="text12">inline-block</div>
+		<div class="red_block" id="text10">block</div>
+		<div class="orange_block" id="text61">list-item</div>
+		<div class="green_block" id="text11">inline</div>
+		<div class="blue_block" id="text12">inline-block</div>
+		
 		<img src="img/text.jpg" alt="图片"/>
 	</body>
 </html>
