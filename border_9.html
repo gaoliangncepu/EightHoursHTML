@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+	<head>
+		<meta charset="utf-8" />
+		<title>border-image-slice</title>
+		<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+		<style>
+			.test1, .test2 {
+				height: 100px;
+				margin-top: 10px;
+				padding: 5px;
+				border-width: 25px 100px;
+				border-style: solid;
+				border-color: orange;
+				border-image-source: url(img/Text.gif);
+				border-image-repeat: repeat stretch;
+			}
+			.test1 {
+				border-image-slice: 200 289;
+			}
+			.test2 {
+				border-image-slice: 200 289 fill;
+			}
+		</style>
+	</head>
+	<body>
+		<h4>按尺寸分割图像，并将分割后的图像通过border-image-repeat指定的方式用作对应边的边框，中间不够的补白</h4>
+		<div class="test1">不保留裁减后的中间区域</div>
+		<div class="test2">保留裁减后的中间区域</div>
+	</body>
+</html>

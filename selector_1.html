@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			* {
+				color: red;
+			}
+			
+			h2 {
+				font-size: 1em;
+			}
+			
+			.father {
+				height: 150px;
+				border: 1px solid;
+			}
+			
+			#child_11 {
+				font: italic normal bold 15px "arial, helvetica, sans-serif";
+			}
+			
+			div ul li{
+				color: blue;
+			}
+			
+			#ul_2 > li {
+				color: green;
+			}
+			
+			#li_31 + li {
+				color: orange;
+			}
+			
+			#li_41 ~ li {
+				color: brown;
+			}
+			
+		</style>
+	</head>
+	<body style="font-size: 20px;">
+		<h2>元素选择器</h2>
+		
+		<div class="father">
+			<div id="child_11">选择符练习1</div>
+			<div id="child_12">
+				<ul id="ul_1">
+					<li id="li_1">11</li>
+					<li id="li_2">12</li>
+				</ul>
+			</div>
+		</div>
+		<h2>派生 和 子</h2>
+		<div class="father">
+			<div id="child_21">选择符练习2</div>
+			<div id="child_22">
+				<ul id="ul_2">
+					<li id="li_1">21</li>
+					<li id="li_2">22</li>
+					<ul>
+						<li>221</li>
+						<li>222</li>
+					</ul>
+				</ul>
+			</div>
+		</div>
+		<h2> 相邻 </h2>
+		<div class="father">
+			<div id="child_31">选择符练习3</div>
+			<div id="child_32">
+				<ul id="ul_3">
+					<li id="li_31">31</li>
+					<li id="li_32">32</li>
+					<li id="li_32">33</li>
+					<ul>
+						<li>321</li>
+						<li>322</li>
+					</ul>
+				</ul>
+			</div>
+		</div>
+		<h2> 兄弟 </h2>
+		<div class="father">
+			<div id="child_41">选择符练习4</div>
+			<div id="child_42">
+				<ul id="ul_4">
+					<li id="li_41">41</li>
+					<li id="li_42">42</li>
+					<li id="li_32">43</li>
+					<ul>
+						<li>421</li>
+						<li>422</li>
+					</ul>
+				</ul>
+			</div>
+		</div>
+	</body>
+</html>
