@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta charset="utf-8" />
+		<title>border-spacing</title>
+		<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com" />
+		<meta name="copyright" content="www.doyoe.com" />
+		<style>
+			h1{font-size:16px;font-family:Arial;}
+			/*border-spacing:横向间距  纵向间距*/
+			.test1{
+				border-collapse:separate;
+				border-spacing:10px 20px;}
+			.test2{
+				border-collapse:collapse;
+				border-spacing:10px 20px;}
+		</style>
+	</head>
+	<body>
+		<h1>边框独立时border-spacing生效</h1>
+		<table border="1" class="test1">
+			<tbody>
+				<tr>
+					<td>独立边框</td>
+					<td>独立边框</td>
+					<td>独立边框</td>
+				</tr>
+				<tr>
+					<td>独立边框</td>
+					<td>独立边框</td>
+					<td>独立边框</td>
+				</tr>
+			</tbody>
+		</table>
+		
+		<h1>相邻边被合并时border-spacing无效</h1>
+		<table border="1" class="test2">
+			<tbody>
+				<tr>
+					<td>合并边框</td>
+					<td>合并边框</td>
+					<td>合并边框</td>
+				</tr>
+				<tr>
+					<td>合并边框</td>
+					<td>合并边框</td>
+					<td>合并边框</td>
+				</tr>
+			</tbody>
+		</table>
+	</body>
+</html>
+			

@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>display</title>
+		<style type="text/css">
+			.red_block {
+				width: 200px;
+				height: 100px;
+				background: red;
+			}
+			.green_block {
+				width: 200px;
+				height: 100px;
+				background: green;
+			}
+			.blue_block {
+				width: 200px;
+				height: 100px;
+				background: blue;
+			}
+			.orange_block {
+				width: 200px;
+				height: 100px;
+				background-color: orange;
+			}
+			hr {
+				margin: 0px;
+			}
+			
+			#text1 {
+			}
+			#text2 {
+				display: inline;
+			}
+			#text3 {
+				display: inline-block;
+			}
+			#text31 {
+				display: list-item;
+			}
+			
+			#text4 {
+				margin: 5px;
+			}
+			#text5 {
+				margin: 5px;
+				display: inline;
+			}
+			#text6 {
+				margin: 5px;
+				display: inline-block;
+			}
+			#text41 {
+				margin: 5px;
+				display: list-item;
+			}
+			
+			#text7 {
+				padding: 5px;
+			}
+			#text8 {
+				padding: 10px;
+				display: inline;
+			}
+			#text9 {
+				padding: 5px;
+				display: inline-block;
+			}
+			#text51 {
+				padding: 5px;
+				display: list-item;
+			}
+			
+			#text10 {
+				border: 5px solid #006400;
+				padding: 5px;
+			}
+			#text11 {
+				border: 5px solid;
+				padding: 10px;
+				display: inline;
+			}
+			#text12 {
+				border: 5px dashed red;
+				padding: 5px;
+				display: inline-block;
+			}
+			#text61 {
+				border: 5px dotted red;
+				padding: 5px;
+				display: list-item;
+			}
+			img {
+				width: 300px;
+				height: 100px;
+				margin: 10px;
+				border: 5px solid orange;
+				padding: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="red_block" id="text1">block</div>
+		<div class="orange_block" id="text31">list-item</div>
+		<div class="green_block" id="text2">inline</div>
+		<div class="blue_block" id="text3">inline-block</div>
+		
+		<hr />
+		<div class="red_block" id="text4">block</div>
+		<div class="orange_block" id="text41">list-item</div>
+		<div class="green_block" id="text5">inline</div>
+		<div class="blue_block" id="text6">inline-block</div>
+		
+		<hr />
+		<div class="red_block" id="text7">block</div>
+		<div class="orange_block" id="text51">list-item</div>
+		<div class="green_block" id="text8">inline</div>
+		<div class="blue_block" id="text9">inline-block</div>
+		
+		<hr />
+		<div class="red_block" id="text10">block</div>
+		<div class="orange_block" id="text61">list-item</div>
+		<div class="green_block" id="text11">inline</div>
+		<div class="blue_block" id="text12">inline-block</div>
+		
+		<img src="img/text.jpg" alt="图片"/>
+	</body>
+</html>

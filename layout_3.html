@@ -1,168 +1,68 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
-"http://www.w3.org/TR/html4/strict.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
 	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		<title>3.练习：父子关系与margin重叠</title>
-		<style type="text/css">
-			/*
-			 * 普通元素相邻时，相邻边的margin值取其中的较大值;
-			 * 普通元素包含时，
-			 * 		top、bottom的margin会合并，取值为较大值；
-			 * 		left、right的margin不会合并，都存在。
-			 * 浮动元素包含时，
-			 * 		父div的margin仅设置给父div，不影响子div；
-			 * 		子div的margin相对于父div的border内侧起作用；
-			 * 		父子margin不会合并。
-			 * margin-right 用于father的右外边距时情况特殊；
-			 * 
-			 */
-			#bottom {
-				height: 200px;
-				background-color: orange;
-				clear: left;
-			}
-			
-			.father {
-				background-color: grey;
-			}
-			
-			hr {
-				clear: both;
-			}
-			
-			/*
-			 * 普通元素相邻时，相邻边的margin值取其中的较大值
-			 * 普通父子div:
-			 * 		top、bottom的margin会合并，取值为较大值；
-			 * 		left、right的margin不会合并，都存在。
-			 */
-			#father1 {
-				margin-top: 15px;
-				margin-left: 15px;
-				margin-right: 25px;
-				margin-bottom: 15px;
-			}
-			#kid1 {
-				background: rgba(100, 200 ,150, 0.5);
-				width: 200px;
-				height: 200px;
-				margin: 10px;
-			}
-			#kid2 {
-				background: rgba(150, 100 ,150, 0.5);
-				width: 200px;
-				height: 200px;
-				margin: 20px;
-			}
-			
-			/* 普通父div
-			 * 浮动子div
-			 * 		父div的margin仅设置给父div，不影响子div；
-			 * 		子div的margin相对于父div的border内侧起作用；
-			 * 		浮动元素相邻时，相邻边的margin值叠加；
-			 */
-			#father2 {
-				border: dashed 10px;
-				height: 200px;
-				margin-top: 15px;
-				margin-left: 15px;
-				margin-right: 25px;/*有作用*/
-				margin-bottom: 15px;
-			}
-			#kid3 {
-				background: rgba(100, 200 ,150, 0.5);
-				width: 100px;
-				height: 100px;
-				margin: 10px;
-				float: left;
-			}
-			#kid4 {
-				background: rgba(150, 100 ,150, 0.5);
-				width: 400px;
-				height: 100px;
-				margin: 20px;
-				float: left;
-			}
-			
-			/* 浮动父div
-			 * 浮动子div
-			 * 		父div的margin仅设置给父div，不影响子div；
-			 * 		子div的margin相对于父div的border内侧起作用；
-			 * 		浮动元素相邻时，相邻边的margin值叠加；
-			 */
-			#father3 {
-				border: dashed 10px;
-				margin-top: 15px;
-				margin-left: 25px;
-				margin-right: 25px;/*不起作用*/
-				margin-bottom: 15px;
-				float: left;
-			}
-			#kid5 {
-				background: rgba(100, 200 ,150, 0.5);
-				width: 100px;
-				height: 100px;
-				margin: 10px;
-				float: left;
-			}
-			#kid6 {
-				background: rgba(150, 100 ,150, 0.5);
-				width: 600px;
-				height: 200px;
-				margin: 20px;
-				float: left;
-			}
-			
-			/* 浮动父div
-			 * 普通子div
-			 * 		父div的margin仅设置给父div，不影响子div；
-			 * 		子div的margin相对于父div的border内侧起作用；
-			 * 		普通元素相邻时，相邻边的margin值取其中较大者；
-			 */
-			#father4 {
-				border: dashed 10px;
-				margin-top: 15px;
-				margin-left: 25px;
-				margin-right: 25px;/*不起作用*/
-				margin-bottom: 15px;
-				float: left;
-			}
-			#kid7 {
-				background: rgba(100, 200 ,150, 0.5);
-				width: 100px;
-				height: 100px;
-				margin: 10px;
-			}
-			#kid8 {
-				background: rgba(150, 100 ,150, 0.5);
-				width: 600px;
-				height: 200px;
-				margin: 20px;
-			}
-		</style>		
+		<meta charset="utf-8" />
+		<title>display</title>
+		<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+		<style>
+			body{font:14px/1.5 georgia,simsun,arial;}
+			h1{margin:10px 0;font-size:20px;}
+			ul{margin:0;padding:0;list-style:none;}
+			.table{display:table;border-collapse:collapse;border:1px solid #ccc;}
+			.table-caption{display:table-caption;margin:0;padding:0;font-size:16px;}
+			.table-column-group{display:table-column-group;}
+			.table-column{display:table-column;width:100px;}
+			.table-row-group{display:table-row-group;}
+			.table-row{display:table-row;}
+			.table-row-group .table-row:hover,.table-footer-group .table-row:hover{background:#f6f6f6;}
+			.table-cell{display:table-cell;padding:0 5px;border:1px solid #ccc;}
+			.table-header-group{display:table-header-group;background:#eee;font-weight:bold;}
+			.table-footer-group{display:table-footer-group;}
+		</style>
 	</head>
 	<body>
-		<div class="father" id="father1">
-			<div class="kid_1" id="kid1">1</div>
-			<div class="kid_1" id="kid2">2</div>
+		<h1>display构造的table小例子，IE7及以下浏览器不支持本示例</h1>
+		<div class="table">
+			<h2 class="table-caption">花名册：</h2>
+			<div class="table-column-group">
+				<div class="table-column"></div>
+				<div class="table-column"></div>
+				<div class="table-column"></div>
+				<div class="table-column"></div>
+			</div>
+			<div class="table-header-group">
+				<ul class="table-row">
+					<li class="table-cell">序号</li>
+					<li class="table-cell">姓名</li>
+					<li class="table-cell">年龄</li>
+					<li class="table-cell">性别</li>
+				</ul>
+			</div>
+			<div class="table-footer-group">
+				<ul class="table-row">
+					<li class="table-cell">footer</li>
+					<li class="table-cell">footer</li>
+					<li class="table-cell">footer</li>
+					<li class="table-cell">footer</li>
+				</ul>
+			</div>
+			<div class="table-row-group">
+				<ul class="table-row">
+					<li class="table-cell">1</li>
+					<li class="table-cell">John</li>
+					<li class="table-cell">19</li>
+				</ul>
+				<ul class="table-row">
+					<li class="table-cell">2</li>
+					<li class="table-cell">Mark</li>
+					<li class="table-cell">21</li>
+				</ul>
+				<ul class="table-row">
+					<li class="table-cell">3</li>
+					<li class="table-cell">Kate</li>
+					<li class="table-cell">26</li>
+				</ul>
+			</div>
 		</div>
-		<hr />
-		<div class="father" id="father2">
-			<div class="kid_2" id="kid3">3</div>
-			<div class="kid_2" id="kid4">4</div>
-		</div>
-		<hr />
-		<div class="father" id="father3">
-			<div class="kid_3" id="kid5">5</div>
-			<div class="kid_3" id="kid6">6</div>
-		</div>
-		<hr />
-		<div class="father" id="father4">
-			<div class="kid_4" id="kid7">7</div>
-			<div class="kid_4" id="kid8">8</div>
-		</div>
-		<div id="bottom"></div>
 	</body>
 </html>

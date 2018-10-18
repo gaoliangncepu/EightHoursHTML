@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta charset="utf-8" />
+		<title>table-layout</title>
+		<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com" />
+		<meta name="copyright" content="www.doyoe.com" />
+		<style>
+			h1{font-size:16px;font-family:Arial;}
+			.auto{
+				table-layout:auto;
+				width:350px;}
+			.fixed{
+				table-layout:fixed;
+				width:350px;}
+		</style>
+	</head>
+	<body>
+		<h1>auto: 表格自动算法（默认）</h1>
+		<table border="1" class="auto">
+			<tbody>
+				<tr>
+					<td>表格自动算法，宽度将基于单元格的内容自动拉伸</td>
+					<td>表格自动算法</td>
+					<td>表格自动算法</td>
+				</tr>
+				<tr>
+					<td>表格自动算法</td>
+					<td>表格自动算法</td>
+					<td>表格自动算法</td>
+				</tr>
+			</tbody>
+		</table>
+		
+		<h1>fixed: 表格固定算法</h1>
+		<table border="1" class="fixed">
+			<tbody>
+				<tr>
+					<td>表格固定算法布局，横向均匀分布，纵向根据内容扩展</td>
+					<td>表格固定算法</td>
+					<td>表格固定算法</td>
+				</tr>
+				<tr>
+					<td>表格固定算法</td>
+					<td>表格固定算法</td>
+					<td>表格固定算法</td>
+				</tr>
+			</tbody>
+		</table>
+	</body>
+</html>
+			

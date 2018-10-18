@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta charset="utf-8" />
+		<title>empty-cells</title>
+		<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com" />
+		<meta name="copyright" content="www.doyoe.com" />
+		<style>
+		h1{font-size:16px;font-family:Arial;}
+		.test{
+			empty-cells:show;}
+		.test2{
+			empty-cells:hide;}
+		</style>
+	</head>
+	<body>
+	<h1>show:</h1>
+	<table border="1" class="test">
+	<tbody>
+		<tr>
+			<td>序号</td>
+			<td>姓名</td>
+			<td>年龄</td>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>Joy</td>
+			<td>26</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>Kate</td>
+			<td></td>
+		</tr>
+	</tbody>
+	</table>
+	
+	<h1>hide:</h1>
+	<table border="1" class="test2">
+		<thead>
+			<tr>
+				<th>序号</th>
+				<th>姓名</th>
+				<th>年龄</th>
+			</tr>
+		</thead>
+		<tfoot>
+			<tr>
+				<td>备注</td>
+				<td colspan="2">只有separate时有效</td>
+			</tr>
+		</tfoot>
+		<tbody>
+			<tr>
+				<td>1</td>
+				<td>Joy</td>
+				<td>26</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>Kate</td>
+				<td></td>
+			</tr>
+		</tbody>
+	</table>
+	</body>
+</html>
+			
